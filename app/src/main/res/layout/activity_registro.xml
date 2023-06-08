@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registro"
+    android:background="#d8d3c8">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        android:backgroundTint="#a24845">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:background="#00000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTER"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:textColor="@color/white" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/scrollviewregistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="75sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fbf8ef"
+            android:orientation="vertical"
+            android:layout_marginTop="1dp">
+
+            <!-- TextView - Nombre -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:text="Adria José Jimenez Martinez"
+                android:textColor="@color/black"
+                android:layout_marginTop="1dp"/>
+
+            <!-- Línea -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLinea" />
+
+            <!-- Spinner - Sexo -->
+            <Spinner
+                android:id="@+id/spinner_sexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/male"
+                android:padding="10sp"
+                android:layout_marginTop="1dp"/>
+
+            <!-- Línea -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLinea" />
+
+            <!-- TextView - Correo electrónico -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:text="adriajose@gmail.com"
+                android:textColor="@color/black"
+                android:layout_marginTop="1dp"/>
+
+            <!-- Línea -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLinea" />
+
+            <!-- TextView - Disponibilidad -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00BB2D"
+                android:padding="10sp"
+                android:text="Disponible"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginTop="1dp"/>
+
+            <!-- Línea -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLinea" />
+
+            <!-- Spinner - Idioma -->
+            <Spinner
+                android:id="@+id/spinner_idioma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/idiomas"
+                android:padding="10sp"
+                android:layout_marginTop="1dp"/>
+
+            <!-- Línea -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLinea" />
+
+            <!-- Spinner - País -->
+            <Spinner
+                android:id="@+id/spinner_pais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/pais"
+                android:padding="10sp"
+                android:layout_marginTop="1dp"/>
+
+            <!-- Línea -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLinea" />
+
+            <!-- TextView - Ubicación -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16sp"
+                android:text="Barcelona"
+                android:textColor="@color/black"
+                android:layout_marginTop="1dp"/>
+
+            <!-- Línea -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLinea" />
+
+            <!-- Spinner - Follower -->
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/follower"
+                android:padding="8sp"
+                android:layout_marginTop="1dp"/>
+
+            <!-- Línea -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLinea" />
+
+            <!-- Switches -->
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:padding="10sp"
+                android:text="Dancer"
+                android:layout_marginTop="1dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLinea" />
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:padding="10sp"
+                android:text="Teacher"
+                android:layout_marginTop="1dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLinea" />
+
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:padding="10sp"
+                android:text="Music"
+                android:layout_marginTop="1dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLinea" />
+
+            <!-- ToggleButton -->
+            <ToggleButton
+                android:id="@+id/toggle_upload_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:textOff="Upload Picture"
+                android:textOn="Upload Picture" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLinea" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- LinearLayout - Registro Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F2EED1"
+        app:layout_constraintTop_toBottomOf="@id/scrollviewregistro"
+        android:layout_marginBottom="100dp">
+
+        <ToggleButton
+            android:id="@+id/btn_registro"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollviewregistro"
+            android:textOn="REGISTER"
+            android:textOff="REGISTER"
+            android:background="#a24845"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

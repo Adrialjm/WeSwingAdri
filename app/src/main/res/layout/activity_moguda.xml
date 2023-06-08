@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Moguda"
+    android:background="#d8d3c8">
+
+    <!-- Barra de herramientas -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        android:backgroundTint="#a24845">
+
+        <!-- Botón de perfil -->
+        <ImageButton
+            android:id="@+id/btn_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_person_4_24"
+            android:background="#00000000"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp">
+
+        </ImageButton>
+
+        <!-- Título de la moguda -->
+        <TextView
+            android:id="@+id/txt_novetat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="MOGUDA"
+            android:textSize="30sp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Contenedor principal desplazable -->
+    <ScrollView
+        android:layout_width="381dp"
+        android:layout_height="670dp"
+        android:layout_marginTop="8dp"
+        android:background="#D1C2B7"
+        android:fillViewport="true"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints">
+
+        <!-- Contenedor lineal para los elementos de la moguda -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Nombre de la moguda -->
+            <TextView
+                android:id="@+id/nomMoguda"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="FESTA D'INICI DE TRIMESTRE I ..."
+                android:textAlignment="center"
+                android:textColor="@color/rojo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Tipo de moguda -->
+            <TextView
+                android:id="@+id/tipusMoguda"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="ALTRES - LINDY HOP"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <!-- Fecha de la moguda -->
+            <TextView
+                android:id="@+id/dataMoguda"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="22/04/2017 - 23/04/2017 (4 HORES)"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Switch de asistencia -->
+            <Switch
+                android:id="@+id/asistencia"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Hi assistiré"
+                android:textSize="18dp" />
+
+            <!-- Organizador y localización -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="Organizador i localització: "
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BCB1B1" />
+
+            <!-- Vista personalizada para el organizador -->
+            <include
+                android:id="@+id/mogudaOrganitzador"
+                layout="@layout/escola_cardview" />
+
+            <!-- Descripción de la moguda -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="Descripció"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BCB1B1" />
+
+            <!-- Texto de descripción de la moguda -->
+            <TextView
+                android:id="@+id/descriptionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="Festa d'inici de Trimestre I presentació del professors!
+   Començem un nou curs ballant a la Festa d'Inici de Trimestre amb presentació dels Trio!! Horaris: de 22:00 a 22:30 - música swing amb Dj de 22:30 a 23:15 - Primera part Concert de 23:15 a 00:00 - Presentació de professors i actuacions de 00:00 a 00:45. - Segona part Concert de 00:45 a 01:30 - música swing amb Dj Preu: 6€ Alumnes Swing Maniacs 8€ BCNswing, Hoppers Garriga, Terrassahoppers, Crazy Legs, TGNswing i Bigpotters de Granollers 9€.
+ Entrada general. 22/04/2017 - 23/04/2017 (4 Hores).
+ Barcelona"
+                android:textSize="15dp" />
+
+            <!-- Botón de asistentes -->
+            <Button
+                android:id="@+id/assistentsButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:paddingTop="5dp"
+                android:text="Assistents"
+                android:textColor="@color/black" />
+
+            <!-- Título de Fotografías -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="-6dp"
+                android:paddingTop="15dp"
+                android:text="FOTOGRAFIES"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BCB1B1" />
+
+            <!-- Texto de Fotografías -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="No hi ha fotografíes"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Barra de navegación -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#e7e2d7"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Icono de inicio -->
+        <ImageButton
+            android:id="@+id/navigation_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_clock"
+            app:tint="@color/rojo" />
+
+        <!-- Icono de búsqueda -->
+        <ImageButton
+            android:id="@+id/navigation_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_news"
+            app:tint="#9b9892" />
+
+        <!-- Icono de notificaciones -->
+        <ImageButton
+            android:id="@+id/navigation_notifications"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_star"
+            app:tint="#9b9892" />
+
+        <!-- Icono de perfil -->
+        <ImageButton
+            android:id="@+id/navigation_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/baseline_calendar_today_24"
+            app:tint="#9b9892" />
+
+        <!-- Icono de búsqueda (alternativo) -->
+        <ImageButton
+            android:id="@+id/icon_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_search"
+            app:tint="#9b9892" />
+
+        <!-- Icono de chat -->
+        <ImageButton
+            android:id="@+id/icon_chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_chat"
+            app:tint="#9b9892" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

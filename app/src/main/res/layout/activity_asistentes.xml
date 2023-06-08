@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Asistentes"
+    android:background="#d8d3c8">
+
+    <!-- Barra de herramientas -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#a24845"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@android:color/white">
+
+        <!-- Botón de perfil -->
+        <ImageButton
+            android:id="@+id/btn_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="#00000000"
+            android:src="@drawable/baseline_person_4_24" />
+
+        <!-- Título de la pantalla -->
+        <TextView
+            android:id="@+id/txt_novetat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ASSISTENTS"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProfessors"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_bar" />
+
+    <!-- Barra de navegación -->
+    <LinearLayout
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#e7e2d7"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Iconos de navegación -->
+        <ImageButton
+            android:id="@+id/navigation_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_clock"
+            app:tint="@color/rojo" />
+
+        <ImageButton
+            android:id="@+id/navigation_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_news"
+            app:tint="#9b9892" />
+
+        <ImageButton
+            android:id="@+id/navigation_notifications"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_star"
+            app:tint="#9b9892" />
+
+        <ImageButton
+            android:id="@+id/navigation_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/baseline_calendar_today_24"
+            app:tint="#9b9892" />
+
+        <ImageButton
+            android:id="@+id/icon_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_search"
+            app:tint="#9b9892" />
+
+        <ImageButton
+            android:id="@+id/icon_chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_chat"
+            app:tint="#9b9892" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

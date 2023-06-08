@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="spinner_items">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Gorila</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="pais">
+        <item>España</item>
+        <item>Japon</item>
+        <item>Rusia</item>
+        <item>Alemania</item>
+        <item>China</item>
+        <item>El Vaticano</item>
+    </string-array>
+
+    <string-array name="ciutats2">
+        <item>Barcelona</item>
+        <item>Teruel</item>
+        <item>Logroño</item>
+        <item>Jaen</item>
+        <item>Murcia</item>
+    </string-array>
+
+</resources>
